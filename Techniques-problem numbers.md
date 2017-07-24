@@ -7,7 +7,7 @@ To begin with, a simple question: 283
 
 + Two pointers:
 	+ Collider pointer: 167,125,344,345,11
-	+ Sliding window: 209,3,（438，76）
+	+ Sliding window: 209,3,438,(76-hard）
 
 
 
