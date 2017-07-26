@@ -1,3 +1,6 @@
+// Time complexity: O(n^2)
+// Space complexity: O(n)
+
 class Solution {
 public:
     int numberOfBoomerangs(vector<pair<int, int>>& points) {
@@ -19,6 +22,8 @@ public:
     }
     
 private:
+    // In the part of int multiplication, we should always keep in mind that whether return int or long long
+    // In this specific problem, we have no need for long long
     int dis( const pair<int,int>&pa, const pair<int,int>&pb){
         return (pa.first - pb.first) * (pa.first - pb.first) + (pa.second - pb.second) * (pa.second - pb.second);
     }
