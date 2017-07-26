@@ -2,7 +2,7 @@
 
 To begin with, a simple question: 283
 
-+ To minimize space complexity to O(1), using an extra index k as pointer.
++ To minimize space complexity to O(1), use an extra index k as pointer.
 	+ Exercise: 27,26,80
 
 Some classic problems:
