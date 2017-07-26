@@ -2,6 +2,7 @@
 #include <vector>
 using namespace std;
 
+// The underlying mechanism for set and map in C++ is balanced binary tree
 // Time complexity: O(nlogn)
 // Space complexity: O(n)
 
