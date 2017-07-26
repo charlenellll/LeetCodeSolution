@@ -24,7 +24,7 @@ public:
         // O(nlogn)
         map<int,int> record;
         for(int i = 0; i < nums1.size(); i++){
-            if( record.find[nums1[i]] == record.end())
+            if( record.find(nums1[i]) == record.end())
                 record.insert( make_pair(nums1[i], 1));
             else
                 record[nums1[i]]++;

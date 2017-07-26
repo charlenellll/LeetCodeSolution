@@ -15,10 +15,14 @@ Exercise: 88(Merge), (215)
 	+ Collider pointer: 167,125,344,345,11
 	+ Sliding window: 209,3,438,(76-hard）
 
-## Problems related to Hash Table
+## Problems related to Hash Table (Search in the table)
 
 + Set: 349
 + Map: 350
+
+Exercise: 242, 202, 290, 205, 451
+
+1
 
 
 Need to be done:
