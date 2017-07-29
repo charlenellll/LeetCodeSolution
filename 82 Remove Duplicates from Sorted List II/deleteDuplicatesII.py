@@ -44,4 +44,5 @@ class Solution(object):
         
         retNode = dummyHead.next
         dummyHead.next = None
+        
         return retNode
