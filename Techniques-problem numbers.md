@@ -1,4 +1,4 @@
-## Problems related to Array
+## Problems about Array
 
 To begin with, a simple question: 283
 
@@ -15,7 +15,7 @@ Exercise: 88(Merge), (215)
 	+ Collider pointer: 167,125,344,345,11
 	+ Sliding window: 209,3,438,(76-hard）
 
-## Problems related to Hash Table
+## Problems about Hash Table
 
 + Set: 349
 + Map: 350
@@ -49,6 +49,19 @@ Exercise: 217 (Simpler than )
 
 220(More difficult than 219)
 
+## Problems about Linked list
+
+A simple question: 206
+
+Exercise: 92, 83, 2-median, (86, 328, 445-median)
+
++ Virtual head node (dummy head): 203
+
+Exercise: 82, (21)
+
++ Complicated pointer operations: it won't be horrify if we think through the process clearly. 24
+
+Exercise: (25-hard)
 
 
 
@@ -65,4 +78,3 @@ Exercise: 217 (Simpler than )
 220: Java, Python
 
 15,18,16,49,215-medium  76,149-hard
-
