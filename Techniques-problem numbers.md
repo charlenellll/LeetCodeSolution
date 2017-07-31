@@ -55,13 +55,26 @@ A simple question: 206
 
 Exercise: 92, 83, 2-median, (86, 328, 445-median)
 
-+ Virtual head node (dummy head): 203
++ Virtual head node (dummyHead): 203
 
-Exercise: 82, (21)
+Exercise: 82, 21
 
 + Complicated pointer operations: it won't be horrify if we think through the process clearly. 24
 
-Exercise: (25-hard)
+(Exercise: 25-hard, 147-Insersion Sort in Linked list, 148-Use (Merge Sort from bottom up) to sort a linked list in O(nlogn) time-Medium)
+
++ Sometimes there's something more than just pointer operations: 237 (delete the node by changing its value instead of usual method when we have no access to the node before it)
+
++ Two pointers: 19
+
+Exercise: 61, （143, 234)
+
+
+## Stack and Queue
+
+20
+
+
 
 
 
