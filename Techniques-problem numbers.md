@@ -84,7 +84,12 @@ Exercise: 61, （143, 234)
 
 + Queue:
 
-102
+	+ BFS: Breadth-first search in binary tree: 102
+
+	(Exercise: 107, 103, 199
+
+	+ Find the shortest path in a graph: Mostly these question don't seem related to graphs. 279
+	( Exercise: 127, 126
 
 
 
@@ -102,4 +107,4 @@ Exercise: 61, （143, 234)
 
 15,18,16,49,215-medium  76,149-hard
 
-144, 94, 145; 102 in Java, Python
+144, 94, 145; 102, 279 in Java, Python
