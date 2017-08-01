@@ -72,9 +72,19 @@ Exercise: 61, （143, 234)
 
 ## Stack and Queue
 
-20
++ Stack:
 
+	+ Classic stack problem - to find the nearest element need to match in a nested hierarchical relationship: 20
 
+	(Exercise: 150, 71
+
+	+ Recursion: recursive algorithms in binary tree: three-ways of traversal: 144, 94 , 145 (Use a stack to imitate the system stack in order to do it iteratively instead of recursively)
+
+	(Exercise: 341
+
++ Queue:
+
+102
 
 
 
@@ -91,3 +101,5 @@ Exercise: 61, （143, 234)
 220: Java, Python
 
 15,18,16,49,215-medium  76,149-hard
+
+144, 94, 145; 102 in Java, Python
