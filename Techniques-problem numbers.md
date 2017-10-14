@@ -91,6 +91,26 @@ Exercise: 61, （143, 234)
 	+ Find the shortest path in a graph: Mostly these question don't seem related to graphs. 279
 	( Exercise: 127, 126
 
+	+ Priority queue: 347
+	(Exercise: 23)
+
+## Binary Tree and Recursion
+
++ Binary tree: A binary tree has a natural recursive structure. It generally consists of two parts: 
+	+ Base case
+	+ Recursive steps 
+
+104; (111: There's a trap upon the base case, should be careful)
+
+226; (Exercise: 100，101，222，110) 
+
++ Be careful about the terminal condition (base case) of a recursion
+	+ 112
+	+ (Exercise: 111,404
+
++ Use the return value of a recursive function cleverly:
+	+ 257
+
 
 
 ## Need to be done:
@@ -99,12 +119,22 @@ Exercise: 61, （143, 234)
 
 3: Python
 
-88: Java, Python
-
-447: Java, Python
-
-220: Java, Python
-
 15,18,16,49,215-medium  76,149-hard
 
-144, 94, 145; 102, 279 in Java, Python
+Amazon: 675
+
+### need to finish in Java and Python
+
+88
+
+447
+
+220
+
+144, 94, 145; 102, 279
+
+
+
+347
+
+104
