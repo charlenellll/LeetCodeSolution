@@ -117,12 +117,29 @@ Exercise: 61, （143, 234)
 
 + Binary Search Tree
 	+ 235
-	+(Exercise: 98, 450, 108, 230， 236(LCA problem))
+	+ (Exercise: 98, 450, 108, 230， 236(LCA problem))
 	+ 当我使用inorder traversal遍历一棵二分搜索树，能得到一个从小到大的有序数组
 
 ## Recursion and Backtracking
 
+This technique can be used in tree-shaped problems.
++ Tree-shaped problems
+	+ 17
 
++ Backtracking: this term is always used when I need to return a value
+	+ Time complexity: for Leetcode #17: 3^n = O(2^n)
+	+ It is the primary method to achieve brute-force solutions(when n is unknown)
+(Exercise: 93, 131)
+
++ Application of backtracking:
+	+ Permutations
+		+ 46: the mnumber are distinct
+		+ (Exercise: 47: the numbers are nit distinct)
+	+ Combinations
+		+ 77
+		+ Pruning of Backtracking:
+			+ 77 - optimization
+		+ （Exercise: 39, 40, 216, 78, 90, 401)
 
 
 
