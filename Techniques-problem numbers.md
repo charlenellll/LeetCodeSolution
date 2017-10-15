@@ -141,6 +141,19 @@ This technique can be used in tree-shaped problems.
 			+ 77 - optimization
 		+ （Exercise: 39, 40, 216, 78, 90, 401)
 
++ Backtracking on 2-D plane: 2 classic problems:
+	+ 79 // Word Search
+	+ **Floodfill** algorithm: 
+		+ 200 // Number of islands
+		+ (Exercise: 130, 417)
+
++ Backtracking is the basis of traditional artificial intelligence
+	+ 51: N-Queens
+	+ (Exercise: 52: N-Queens II - it can be faster by many optimization)
+	+ A cool exercise: (37: Sudoku Solver)
+
+## Dynamic Programming
+
 
 
 
