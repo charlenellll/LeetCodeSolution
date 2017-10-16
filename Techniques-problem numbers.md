@@ -36,12 +36,10 @@ All hash table problems requires our determination on what to search for:
 
 Compare the similarity and differences between 3# and 219#:
 
-Similarity: 
-
++ Similarity: 
 	+ They are both problems about hash table + sliding window.
 
-Differences:
-
++ Differences:
 	+ The number of values is limited in 3#, only 256 types, so we used an array instead of set or map.
 	+ The size of sliding window is flexible in 3# while it is fixed in 219#.
 
@@ -154,7 +152,21 @@ This technique can be used in tree-shaped problems.
 
 ## Dynamic Programming
 
+Recursion problem - overlapping subproblems:
++ Memoizing search - recursive: top-down
++ Dynamic programming - non-recursive: bottom-up
 
+The technique to solve dynamic programming problems:
++ 1. find out naive recursive procedures
++ 2. use memoizing: top-down approach, to figure out the structure
++ 3. optimize it using dynamic programming: botom-up approach
+
+70
+(Exercise: 120, 64)
+
++ Find out subproblems:
+	+ 343
+	+ (Exercise: 279, 91, 62, 63)
 
 
 ## Need to be done:
