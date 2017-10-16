@@ -131,8 +131,8 @@ This technique can be used in tree-shaped problems.
 
 + Application of backtracking:
 	+ Permutations
-		+ 46: the mnumber are distinct
-		+ (Exercise: 47: the numbers are nit distinct)
+		+ 46: the numbers are distinct
+		+ (Exercise: 47: the numbers are not distinct)
 	+ Combinations
 		+ 77
 		+ Pruning of Backtracking:
