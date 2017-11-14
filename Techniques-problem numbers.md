@@ -1,3 +1,7 @@
+Most problem set in interviews are testing your basic knowledge.
+
+DO NOT underestimate the importance of basics.
+
 ## Problems about Array
 
 To begin with, a simple question: 283
@@ -152,6 +156,8 @@ This technique can be used in tree-shaped problems.
 
 ## Dynamic Programming
 
+> One problem about the course is it lacks concepts about recursive equation. So it is more fancy in techniques but did no help for me, for example, 9-7 is really hard to understand without a proper recursive equation, which is exactly it lacks.
+
 Recursion problem - overlapping subproblems:
 + Memoizing search - recursive: top-down
 + Dynamic programming - non-recursive: bottom-up
@@ -161,13 +167,77 @@ The technique to solve dynamic programming problems:
 + 2. use memoizing: top-down approach, to figure out the structure
 + 3. optimize it using dynamic programming: botom-up approach
 
-70
+70  
 (Exercise: 120, 64)
 
 + Find out subproblems:
 	+ 343
 	+ (Exercise: 279, 91, 62, 63)
 
++ Be aware of the specific definition of the state and its Recursive Equation:
+	+ 198
+	+ (213 - put 198 in a ring; 337- put 138 in a binary tree; 309)
++ Knapsack:
+	+ Bottom up: 2D-Dynamic Programming
+	+ Lots of varieties of knapsack problems
+	+ 416： **It's kind of hard to understand. I can't solve it well.**
+	+ (Exercise: 322, 377 - 面试时：元素能否重复取？ 取元素的顺序是否相关，474，139， 494)
+** 9-7 is really hard for me. I shoud revisit this.**
+
++ Longest increasing subsequence:
+	+ 300 (it has a O(NlogN) optimization: MergeSort)
+	+ (Exercise: 376)
+
++ Longest(greatest) common subsequence (GCS):
+	+ A useful method to process strings such as genetic engineering
+	+ Let LCS(m,n) be the length of the LCS of S1[0..m] and S2[0..n]
+	+ LCS(m,n) = 0 if (m == 0 or n == 0)
+	+ LCS(m,n) = 1 + LCS(m-1,n-1), if S1[m] == S2[n]
+	+ LCS(m,n) = max{LCS(m-1, n), LCS(m, n-1)}, if S1[m] != S2[n]
+
++ Dijkstra single source shortest path
+
++ Rebuild the answer from the path: Using Dynamic Programming to give specific answer.
+
++ There are more dynamic programming problems in Leetcode but tend to be difficult.
+
+
+## Greedy algorithm
+
+The difficult part about greedy algorithm is **to decide if this problem can be solved by greedy algorithm.**
+
+It always concerns about sorting coz always related to max or min value.
+
++ Assign cookies
+	+ 455
+	+ (Exercise: 392: you won't even notice that you are using greedy algorithm)
+
++ Greedy Algorithm and Dynamic Programming
+	+ 435: Non-overlapping intervals.
+		+ Sorting the intervals: always use the start index of it.
+		+ Dynamic programming: like a longesgt increasing subsequence problem.
+
+NOT all dynamic programming problem can be solved with greedy method!
+
++ Greedy choice property:
+	+ It's hard to prove it
+	+ Use counterexample!
+		+ Suppose we use greedy method, can the small example problem solved by it?
+		+ If not, then we can't use greedy method.
+	+ How can we prove correctness of greedy-choice property if we can't find any couterexample?
+		+ Mathematical induction
+		+ Proof by contradiction (Reductio ad absurdum):
+			+ Let greedy method be A
+			+ Let the (imaginary) optimal solution be O
+			+ Prove that A can replace O without any influence on the optimal result
+			+ So A is optimal
+			+ This problem can be solved by greedy method
+
++ Problems using greedy method (but not just greedy method!):
+	+ Minimum spanning tree
+	+ Shortest path
+
++ Important part about this category: try top solve more problems and get a hold of what kind of problems can be solved by greedy algorithm, what cannot be.
 
 ## Need to be done:
 
@@ -194,3 +264,9 @@ Amazon: 675
 347
 
 104
+
+---------
+
+from 279 on
+
+300: Optimization: Merge Sort.
