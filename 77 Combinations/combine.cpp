@@ -1,7 +1,6 @@
 class Solution {
 private:
     vector<vector<int>> res;
-    vector<bool> used;
     // To compute C(n,k), put the unfinished combinations we found into c, and search for new element from "start" index
     void generateCombination(int n, int k, int start, vector<int> &c){
         

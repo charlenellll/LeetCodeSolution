@@ -6,7 +6,7 @@ public:
         for( int i = 0; i < s.size(); i++){            
             if( s[i] == '(' || s[i] == '[' || s[i] == '{')
                 stack.push( s[i] );           
-            else{
+            else{ // it is ') ] }'
                 if( stack.size() == 0 )
                     return false;
                 

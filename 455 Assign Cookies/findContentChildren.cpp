@@ -2,6 +2,7 @@ class Solution {
 public:
     int findContentChildren(vector<int>& g, vector<int>& s) {
         
+        // O(NlogN)
         sort(g.begin(), g.end(), greater<int>());
         sort(s.begin(), s.end(), greater<int>());
         

@@ -23,7 +23,7 @@ public:
 
         sort(intervals.begin(), intervals.end(), compare);
         
-        // the interval who ends the earlies is the first element, so res is at least 1
+        // the interval who ends the earliest is the first element, so res is at least 1
         int res = 1;
         // the index of the previous interval
         int pre = 0;

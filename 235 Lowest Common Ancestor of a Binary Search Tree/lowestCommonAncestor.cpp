@@ -24,7 +24,5 @@ public:
         return root;
 
         // can talk to the interviewer if I need to check if p and q are in the tree
-        
-        return NULL;
     }
 };

@@ -23,6 +23,7 @@ public:
             int level = q.front().second;
             q.pop();
             
+            // push back an empty vector when this level is not yet created in the result vector
             if( level == res.size() )
                 res.push_back( vector<int>() );
             

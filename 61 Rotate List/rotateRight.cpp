@@ -32,6 +32,8 @@ public:
         for( int i = 0; i < k; i++)
             q = q->next;
         
+        // stop when q->next = NULL
+        // p is the head of the sequence we want to put to front, while q is the tail of it
         while( q-> next != NULL ){
             p = p->next;
             q = q->next;

@@ -8,6 +8,8 @@
  * };
  */
 
+// unlike preorder traversal, we need this struct to make all three traversal similar in the form
+// or they will be really different
 struct Command{
     string s; // go, print
     TreeNode* node;

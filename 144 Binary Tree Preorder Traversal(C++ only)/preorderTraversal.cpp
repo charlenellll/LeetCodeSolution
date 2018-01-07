@@ -8,6 +8,9 @@
  * };
  */
 
+// this struct is unnecessary in preorder traversal, HOWEVER
+// inorder and postorder, unlike preorder traversal, need this struct to make all three traversal similar in the form
+// or they will be really different
 struct Command{
     string s; // go, print
     TreeNode* node;
@@ -41,6 +44,35 @@ public:
                     stack.push( Command("go",command.node->left) );
                 stack.push( Command("print",command.node) );
             }
+        }
+        
+        return res;
+    }
+};
+
+
+// Simplified version
+
+class Solution {
+public:
+    vector<int> preorderTraversal(TreeNode* root) {
+        
+        vector<int> res;
+        if( root ==  NULL) 
+            return res;
+        
+        stack<TreeNode*> stack;
+        stack.push(root);
+        
+        while( !stack.empty() ){
+            TreeNode* node = stack.top();
+            stack.pop();
+            
+            if( node->right != NULL )
+                stack.push( node->right );
+            if( node->left != NULL )
+                stack.push( node->left );
+            res.push_back( node->val );
         }
         
         return res;
