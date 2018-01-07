@@ -7,7 +7,7 @@ DO NOT underestimate the importance of basics.
 To begin with, a simple question: 283
 
 + To minimize space complexity to O(1), use an extra index k as pointer.
-	+ Exercise: 27,26,80
+  + Exercise: 27,26,80
 
 Some classic problems:
 
@@ -16,8 +16,8 @@ Some classic problems:
 Exercise: 88(Merge), (215)
 
 + Two pointers:
-	+ Collider pointer: 167,125,344,345,11
-	+ Sliding window: 209,3,438,(76-hard）
+  + Collider pointer: 167,125,344,(345),11
+  + Sliding window: 209,3,438,(76-hard）
 
 ## Problems about Hash Table
 
@@ -41,11 +41,11 @@ All hash table problems requires our determination on what to search for:
 Compare the similarity and differences between 3# and 219#:
 
 + Similarity: 
-	+ They are both problems about hash table + sliding window.
+  + They are both problems about hash table + sliding window.
 
 + Differences:
-	+ The number of values is limited in 3#, only 256 types, so we used an array instead of set or map.
-	+ The size of sliding window is flexible in 3# while it is fixed in 219#.
+  + The number of values is limited in 3#, only 256 types, so we used an array instead of set or map.
+  + The size of sliding window is flexible in 3# while it is fixed in 219#.
 
 Exercise: 217 (Simpler than )
 
@@ -76,83 +76,83 @@ Exercise: 61, （143, 234)
 
 + Stack:
 
-	+ Classic stack problem - to find the nearest element need to match in a nested hierarchical relationship: 20
+  + Classic stack problem - to find the nearest element need to match in a nested hierarchical relationship: 20
 
-	(Exercise: 150, 71
+  (Exercise: 150, 71
 
-	+ Recursion: recursive algorithms in binary tree: three-ways of traversal: 144, 94 , 145 (Use a stack to imitate the system stack in order to do it iteratively instead of recursively)
+  + Recursion: recursive algorithms in binary tree: three-ways of traversal: 144, 94 , 145 (Use a stack to imitate the system stack in order to do it iteratively instead of recursively)
 
-	(Exercise: 341
+  (Exercise: 341
 
 + Queue:
 
-	+ BFS: Breadth-first search in binary tree: 102
+  + BFS: Breadth-first search in binary tree: 102
 
-	(Exercise: 107, 103, 199
+  (Exercise: 107, 103, 199
 
-	+ Find the shortest path in a graph: Mostly these question don't seem related to graphs. 279
-	( Exercise: 127, 126
+  + Find the shortest path in a graph: Mostly these question don't seem related to graphs. 279
+    ( Exercise: 127, 126
 
-	+ Priority queue: 347
-	(Exercise: 23)
+  + Priority queue: 347
+    (Exercise: 23)
 
 ## Binary Tree and Recursion
 
 + Binary tree: A binary tree has a natural recursive structure. It generally consists of two parts: 
-	+ Base case
-	+ Recursive steps 
+  + Base case
+  + Recursive steps 
 
 104; (111: There's a trap upon the base case, should be careful)
 
 226; (Exercise: 100，101，222，110) 
 
 + Be careful about the terminal condition (base case) of a recursion
-	+ 112
-	+ (Exercise: 111,404
+  + 112
+  + (Exercise: 111,404
 
 + Use the return value of a recursive function cleverly:
-	+ 257
-	+ (Exercise: 113,129)
+  + 257
+  + (Exercise: 113,129)
 
 + More complicated recursion logic
-	+ 437
+  + 437
 
 + Binary Search Tree
-	+ 235
-	+ (Exercise: 98, 450, 108, 230， 236(LCA problem))
-	+ 当我使用inorder traversal遍历一棵二分搜索树，能得到一个从小到大的有序数组
+  + 235
+  + (Exercise: 98, 450, 108, 230， 236(LCA problem))
+  + 当我使用inorder traversal遍历一棵二分搜索树，能得到一个从小到大的有序数组
 
 ## Recursion and Backtracking
 
 This technique can be used in tree-shaped problems.
 + Tree-shaped problems
-	+ 17
+  + 17
 
 + Backtracking: this term is always used when I need to return a value
-	+ Time complexity: for Leetcode #17: 3^n = O(2^n)
-	+ It is the primary method to achieve brute-force solutions(when n is unknown)
-(Exercise: 93, 131)
+  + Time complexity: for Leetcode #17: 3^n = O(2^n)
+  + It is the primary method to achieve brute-force solutions(when n is unknown)
+    (Exercise: 93, 131)
 
 + Application of backtracking:
-	+ Permutations
-		+ 46: the numbers are distinct
-		+ (Exercise: 47: the numbers are not distinct)
-	+ Combinations
-		+ 77
-		+ Pruning of Backtracking:
-			+ 77 - optimization
-		+ （Exercise: 39, 40, 216, 78, 90, 401)
+  + Permutations
+    + 46: the numbers are distinct
+    + (Exercise: 47: the numbers are not distinct)
+  + Combinations
+    + 77
+    + Pruning of Backtracking:
+      + 77 - optimization
+    + （Exercise: 39, 40, 216, 78, 90, 401)
 
 + Backtracking on 2-D plane: 2 classic problems:
-	+ 79 // Word Search
-	+ **Floodfill** algorithm: 
-		+ 200 // Number of islands
-		+ (Exercise: 130, 417)
+  + 79 // Word Search
+  + **Floodfill** algorithm: 
+    + 200 // Number of islands
+    + (Exercise: 130, 417)
 
 + Backtracking is the basis of traditional artificial intelligence
-	+ 51: N-Queens
-	+ (Exercise: 52: N-Queens II - it can be faster by many optimization)
-	+ A cool exercise: (37: Sudoku Solver)
+  + 51: N-Queens
+  + (Exercise: 52: N-Queens II - it can be faster by many optimization)
+  + A cool exercise: (37: Sudoku Solver)
 
 ## Dynamic Programming
 
@@ -171,29 +171,29 @@ The technique to solve dynamic programming problems:
 (Exercise: 120, 64)
 
 + Find out subproblems:
-	+ 343
-	+ (Exercise: 279, 91, 62, 63)
+  + 343
+  + (Exercise: 279, 91, 62, 63)
 
 + Be aware of the specific definition of the state and its Recursive Equation:
-	+ 198
-	+ (213 - put 198 in a ring; 337- put 138 in a binary tree; 309)
+  + 198
+  + (213 - put 198 in a ring; 337- put 138 in a binary tree; 309)
 + Knapsack:
-	+ Bottom up: 2D-Dynamic Programming
-	+ Lots of varieties of knapsack problems
-	+ 416： **It's kind of hard to understand. I can't solve it well.**
-	+ (Exercise: 322, 377 - 面试时：元素能否重复取？ 取元素的顺序是否相关，474，139， 494)
-** 9-7 is really hard for me. I shoud revisit this.**
+  + Bottom up: 2D-Dynamic Programming
+  + Lots of varieties of knapsack problems
+  + 416： **It's kind of hard to understand. I can't solve it well.**
+  + (Exercise: 322, 377 - 面试时：元素能否重复取？ 取元素的顺序是否相关，474，139， 494)
+    ** 9-7 is really hard for me. I shoud revisit this.**
 
 + Longest increasing subsequence:
-	+ 300 (it has a O(NlogN) optimization: MergeSort)
-	+ (Exercise: 376)
+  + 300 (it has a O(NlogN) optimization: MergeSort)
+  + (Exercise: 376)
 
 + Longest(greatest) common subsequence (GCS):
-	+ A useful method to process strings such as genetic engineering
-	+ Let LCS(m,n) be the length of the LCS of S1[0..m] and S2[0..n]
-	+ LCS(m,n) = 0 if (m == 0 or n == 0)
-	+ LCS(m,n) = 1 + LCS(m-1,n-1), if S1[m] == S2[n]
-	+ LCS(m,n) = max{LCS(m-1, n), LCS(m, n-1)}, if S1[m] != S2[n]
+  + A useful method to process strings such as genetic engineering
+  + Let LCS(m,n) be the length of the LCS of S1[0..m] and S2[0..n]
+  + LCS(m,n) = 0 if (m == 0 or n == 0)
+  + LCS(m,n) = 1 + LCS(m-1,n-1), if S1[m] == S2[n]
+  + LCS(m,n) = max{LCS(m-1, n), LCS(m, n-1)}, if S1[m] != S2[n]
 
 + Dijkstra single source shortest path
 
@@ -209,33 +209,33 @@ The difficult part about greedy algorithm is **to decide if this problem can be 
 It always concerns about sorting coz always related to max or min value.
 
 + Assign cookies
-	+ 455
-	+ (Exercise: 392: you won't even notice that you are using greedy algorithm)
+  + 455
+  + (Exercise: 392: you won't even notice that you are using greedy algorithm)
 
 + Greedy Algorithm and Dynamic Programming
-	+ 435: Non-overlapping intervals.
-		+ Sorting the intervals: always use the start index of it.
-		+ Dynamic programming: like a longesgt increasing subsequence problem.
+  + 435: Non-overlapping intervals.
+    + Sorting the intervals: always use the start index of it.
+    + Dynamic programming: like a longesgt increasing subsequence problem.
 
 NOT all dynamic programming problem can be solved with greedy method!
 
 + Greedy choice property:
-	+ It's hard to prove it
-	+ Use counterexample!
-		+ Suppose we use greedy method, can the small example problem solved by it?
-		+ If not, then we can't use greedy method.
-	+ How can we prove correctness of greedy-choice property if we can't find any couterexample?
-		+ Mathematical induction
-		+ Proof by contradiction (Reductio ad absurdum):
-			+ Let greedy method be A
-			+ Let the (imaginary) optimal solution be O
-			+ Prove that A can replace O without any influence on the optimal result
-			+ So A is optimal
-			+ This problem can be solved by greedy method
+  + It's hard to prove it
+  + Use counterexample!
+    + Suppose we use greedy method, can the small example problem solved by it?
+    + If not, then we can't use greedy method.
+  + How can we prove correctness of greedy-choice property if we can't find any couterexample?
+    + Mathematical induction
+    + Proof by contradiction (Reductio ad absurdum):
+      + Let greedy method be A
+      + Let the (imaginary) optimal solution be O
+      + Prove that A can replace O without any influence on the optimal result
+      + So A is optimal
+      + This problem can be solved by greedy method
 
 + Problems using greedy method (but not just greedy method!):
-	+ Minimum spanning tree
-	+ Shortest path
+  + Minimum spanning tree
+  + Shortest path
 
 + Important part about this category: try top solve more problems and get a hold of what kind of problems can be solved by greedy algorithm, what cannot be.
 

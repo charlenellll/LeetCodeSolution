@@ -6,6 +6,7 @@ public:
     int numberOfBoomerangs(vector<pair<int, int>>& points) {
         int res = 0;
         
+        // assume i to be the middle point, find the # of boomerang when i is the middle point
         for(int i = 0; i < points.size(); i++ ){
             
             unordered_map<int,int> record;
