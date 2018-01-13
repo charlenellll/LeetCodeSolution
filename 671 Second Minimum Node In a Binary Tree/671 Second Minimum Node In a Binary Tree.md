@@ -39,3 +39,27 @@ In the recursive function:
 	+ if both its subtree have value that's second smallest value other than minVal, we take the smaller one
 	+ if any of its subtree returns -1 (only has minVal or has no subtree), take the larger one
 		+ if both the subtrees consists of minVal, it will return -1
+
+## solution 2: use a set
+
+It's not as efficient as pruned recursion. It will traverse all nodes.
+
+	int findSecondMinimumValue2(TreeNode* root) {
+	    set<int> vals;
+	    stack<TreeNode*> nodes;
+	    nodes.push(root);
+	    while (!nodes.empty()) {//BFS
+	        TreeNode* node = nodes.top();
+	        nodes.pop();
+	        vals.insert(node->val);
+	        if (node->left)
+	            nodes.push(node->left);
+	        if (node->right)
+	            nodes.push(node->right);
+	    }
+	    set<int>::iterator it = vals.begin();
+	    if (vals.size() > 1)//取第二个元素
+	        return *(++it);
+	    else
+	        return -1;
+	}
