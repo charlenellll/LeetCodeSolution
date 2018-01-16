@@ -239,34 +239,14 @@ NOT all dynamic programming problem can be solved with greedy method!
 
 + Important part about this category: try top solve more problems and get a hold of what kind of problems can be solved by greedy algorithm, what cannot be.
 
-## Need to be done:
+------------------
 
-125: in Java
+## Some thoughts I get when I deal with Leetcode
 
-3: Python
+170 Two Sum III:  
 
-15,18,16,49,215-medium  76,149-hard
+My understanding of collider pointer upgrade a level:  
+I only need to use collider pointers on the data structures that I cannot know all elements' values such as a sorted array. On data sructure such as map and set I can know all the keys so there is no need for two pointers.
 
-Amazon: 675
+In this problem I used unordered_map so I don't need to use collider pointers, I can just traverse the map once and find if each key's completement exists in this map (&& key\*2 != target value) or key\*2 == target value.
 
-### need to finish in Java and Python
-
-88
-
-447
-
-220
-
-144, 94, 145; 102, 279
-
-
-
-347
-
-104
-
----------
-
-from 279 on
-
-300: Optimization: Merge Sort.
