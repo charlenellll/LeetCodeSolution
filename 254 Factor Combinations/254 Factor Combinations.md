@@ -42,3 +42,5 @@ output:
 It is really important and I don't handle it well.  
 
 The hard part is how to restrict each (recursion of) backtracking not to use previously used elements.
+
+What I should be careful for this code is marked between lines.
