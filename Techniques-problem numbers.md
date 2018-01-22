@@ -177,12 +177,16 @@ The technique to solve dynamic programming problems:
 + Be aware of the specific definition of the state and its Recursive Equation:
   + 198
   + (213 - put 198 in a ring; 337- put 138 in a binary tree; 309)
+
+> Knapsack problem:  
+The capacity of the knapsack is C. There are n items named 0..n-1, for each item, its weight is w(i) and value is v(i). This problem is to solve that how to fill the knapsack that the sum of weights is no larger than the capacity and the sum of values is greatest.
+
 + Knapsack:
   + Bottom up: 2D-Dynamic Programming
   + Lots of varieties of knapsack problems
   + 416： **It's kind of hard to understand. I can't solve it well.**
   + (Exercise: 322, 377 - 面试时：元素能否重复取？ 取元素的顺序是否相关，474，139， 494)
-    ** 9-7 is really hard for me. I shoud revisit this.**
+    ** 9-7 is really hard for me. I shoud revisit this**
 
 + Longest increasing subsequence:
   + 300 (it has a O(NlogN) optimization: MergeSort)

@@ -1,3 +1,5 @@
+// O(n * sum/2) = O(n * sum)
+
 class Solution {
 
 public:
