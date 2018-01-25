@@ -7,6 +7,8 @@ FB interview: the variantion of 310
 
 ### for practice
 
+9 with 7
+
 125: in Java
 
 3: Python
