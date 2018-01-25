@@ -47,7 +47,7 @@ When I do this, notice why I should use i+1, not i! although logically "i" would
 
 ### for (unordered_)Map
 
-When you refer to a key that does not exist, map will automatically create a (key,value) pair where the value = 0
+When you refer to a key that does not exist, **map will automatically create a (key,value) pair where the value = 0**
 
 ### for int array
 

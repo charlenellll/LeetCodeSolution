@@ -56,3 +56,6 @@ sum(i) = max{A[i], A[i] + sum(i+1)}
 
 	  return maxSum;
 	}
+
+
+## We cannot use collider pointers on an array containing negative elements!
