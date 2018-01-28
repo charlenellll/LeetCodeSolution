@@ -24,4 +24,30 @@ Since each direction can only be one of the four directions, we can just use two
 
 This idea is really delicate.
 
-**Note:**Remember to use "break" when use switch-case or you'll get totally different result.
+# "break" in switch-case!
+
+**Note:**Remember to use "break" when use switch-case or you'll get totally different result.  
+If I don't use break, it will not only execute the line of its case, and will execute all lines after it.
+
+For example:
+
+    for( int i = 0; i < moves.size(); i++ ){
+        switch(moves[i]){
+            case 'U':
+                y++;
+                // If not using break after each case, will compile error
+            case 'D':
+                y--;
+            case 'L':
+                x--;
+            case 'R':
+                x++;
+        }
+    }
+
+if the input is 'U', it will execute: y++, y--, x--, x++  
+if the input is 'D', it will execute: y--, x--, x++  
+if the input is 'L', it will execute: x--, x++  
+the same to 'R'
+
+So using break is extremely important!
