@@ -17,6 +17,8 @@ For example, return the following Ids for the above Weather table:
 	|  4 |
 	+----+
 
+# It testd for DATE manipulation and WHERE
+
 ## A trap in this problem; use datediff() or TO_DAYS()
 
 Originally, my code was:

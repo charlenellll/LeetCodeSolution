@@ -15,3 +15,7 @@ For example, your query should return the following for the above table:
 	| a@b.com |
 	+---------+
 **Note**: All emails are in lowercase.
+
+## GROUP BY + HAVING
+
+It tests GROUP BY and HAVING function.

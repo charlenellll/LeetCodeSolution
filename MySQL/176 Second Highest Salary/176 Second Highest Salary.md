@@ -15,6 +15,8 @@ For example, given the above Employee table, the query should return 200 as the 
 	| 200                 |
 	+---------------------+
 
+# It testd for the order and take out certain element(s)
+
 ## Solution 1: the max number except the max one
 
 This solution can only be used for this specific condition. If we are asked for k-th highest when k is a large number, this solution is not useful.

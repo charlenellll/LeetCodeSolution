@@ -15,3 +15,7 @@ Given the Employee table, write a SQL query that finds out employees who earn mo
 	+----------+
 	| Joe      |
 	+----------+
+
+## WHERE
+
+It tests the WHERE conditions.
