@@ -31,3 +31,6 @@ Example ouput:
 	+-------+-------+
 
 ## LEFT JOIN
+  
+**"select" keys when joining table:**  
+if the selected column has no duplicate in different tables, we can just use the column. If there are duplicates, we should use a.key1, b.key2 to specify each column do we want. There's no way can we use just the column name when there are duplicate because it will be ambiguous.

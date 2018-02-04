@@ -26,3 +26,5 @@ where a1.free = 1 and (
     or
     a1.seat_id - 1 in (select seat_id from cinema where free = 1)
 );
+
+# in this code, note that: only when we use "IN" or "NOT IN", the temp table after that does not need an alias.

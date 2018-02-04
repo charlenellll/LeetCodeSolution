@@ -31,6 +31,7 @@ Follow-up:
 Can you write a query to return the accept rate but for every month?
 How about the cumulative accept rate for every day?
 
-## I think it is advanced use of COUNT()
+## COUNT() + advanced use of DISTINCT: multiple indexes
 
-I still need time to process this problem.
+DISTINCT can be used on multiple indexes (as we used for this problem)!  
+It will return distinct combinations of indexes. We just need one DISTINCT at the beginning and all the keys after it will be considered for distinct combinations.
