@@ -41,4 +41,8 @@ This process can be simplified by @i := @i + (@pre<>(@pre:=Score))
 
 why?
 
+## about ORDER BY: cannot ORDER BY a variable
 
+In this problem, ORDER BY Score DESC works perfectly but ORDER BY Rank will result in no change of Scores' order with only the rank from 1 to 6 (when then desired result is 1 1 2 3 3 4)
+
+I figured that is because we cannot order by a variable!! 
