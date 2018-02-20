@@ -17,7 +17,9 @@ See the code.
 
 # Follow up: without using any loop / recursion
 
-## It's all about MATH!
+Below, codes are all in Java.
+
+It's all about Math!
 
 ### Method 1
 
@@ -42,7 +44,13 @@ It is worthwhile to mention that Method 1 works **only when the base is prime**.
 
 If log10(n) / log10(3) returns an int (more precisely, a double but has 0 after decimal point), then n is a power of 3.
 
-But be careful here, you cannot use log (natural log) here, because it will generate round off error for n=243. This is more like a coincidence. I mean when n=243, we have the following results:
+	If n = 3^k, logn = log(3^k) = klog3
+
+**Note that:**
+But be careful here, you cannot use log (natural log) here, because it will generate round off error for n=243. This is more like a coincidence.
+**This problem also exists in C++!**
+
+I mean when n=243, we have the following results:
 
 	log(243) = 5.493061443340548    log(3) = 1.0986122886681098
 	   ==> log(243)/log(3) = 4.999999999999999
