@@ -27,7 +27,7 @@ See the code to see the optimizations starting from brutal force.
 
 + the second pass only take O(26) = O(1) time
 
-### 4. optimization 3: use 1 int array recording count and index information + 2 pass(1 on input 1 on array)
+### 4. optimization 3: use 1 int array recording count and index information + 2 pass(1 on input 1 on array) 高级操作
 
 See the code.
 
