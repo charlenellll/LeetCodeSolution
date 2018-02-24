@@ -71,6 +71,14 @@ Exercise: 82, 21
 
 Exercise: 61, （143, 234)
 
+Some techniques I've used in some problems:
+
+### 234 Palindrome Linked List:
+
+For the follow up requirement of O(N) Time and O(1) Space, we should use:
++ find the half position of a singly linked list: use a fast pointer and a slow pointer;
++ reverse the second half of the singly linked list: see 206 Reverse Linked List.
+
 
 ## Stack and Queue
 
