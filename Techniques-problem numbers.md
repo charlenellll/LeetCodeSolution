@@ -2,7 +2,7 @@ Most problem set in interviews are testing your basic knowledge.
 
 DO NOT underestimate the importance of basics.
 
-## Problems about Array
+# Problems about Array
 
 To begin with, a simple question: 283
 
@@ -19,7 +19,7 @@ Exercise: 88(Merge), (215)
   + Collider pointer: 167,125,344,(345),11
   + Sliding window: 209,3,438,(76-hard）
 
-## Problems about Hash Table
+# Problems about Hash Table
 
 + Set: 349
 + Map: 350
@@ -51,7 +51,16 @@ Exercise: 217 (Simpler than )
 
 220(More difficult than 219)
 
-## Problems about Linked list
+## unordered_set和unordered_map内部实现与set和map大有不同：
+
++ set和map内部实现是基于Red Black-Tree(红黑树)
+  + 查找，插入，删除一个元素：O(logN)
+  + 根据一组输入，建立一颗含有N个元素的树：O(NlogN)
++ unordered_set和unordered_map内部实现是基于哈希表(hashtable)
+  + 查找，插入，删除：linear time = O(1)
+  + 同样的一组输入，建立含N个元素的hash table: O(N)，比红黑树快！
+
+# Problems about Linked list
 
 A simple question: 206
 
@@ -71,16 +80,34 @@ Exercise: 82, 21
 
 Exercise: 61, （143, 234)
 
-Some techniques I've used in some problems:
+A technique is often used in singly linked list:
 
-### 234 Palindrome Linked List:
+## |Fast pointer and slow pointer 快慢指针| 
+
+### 1. Find the midpoint of the linked list 寻找链表中点/在有序链表寻找中位数
+
+#### 234 Palindrome Linked List:
 
 For the follow up requirement of O(N) Time and O(1) Space, we should use:
-+ find the half position of a singly linked list: use a fast pointer and a slow pointer;
++ find the midpoint of a singly linked list: use a fast pointer and a slow pointer;
 + reverse the second half of the singly linked list: see 206 Reverse Linked List.
 
+### 2. Check if the singly linked list has a cycle in it 检查链表是否有环
 
-## Stack and Queue
+为什么用快慢指针找链表的环，快指针和慢指针一定会相遇？
+
+可以用数学归纳法来思考。首先，由于链表是个环，所以相遇的过程可以看作是快指针从后边追赶慢指针的过程。那么做如下思考：  
+1：快指针与慢指针之间差一步。此时继续往后走，慢指针前进一步，快指针前进两步，两者相遇。
+2：快指针与慢指针之间差两步。此时唏嘘往后走，慢指针前进一步，快指针前进两步，两者之间相差一步，转化为第一种情况。
+3：快指针与慢指针之间差N步。此时继续往后走，慢指针前进一步，快指针前进两步，两者之间相差(N+1-2)-> N-1步。
+
+因此，此题得证。所以==快指针必然与慢指针相遇。又因为快指针速度是慢指针的两倍，所以相遇时必然只绕了一圈(当快指针速度是慢指针的两倍时)==。如果速度比不同，最终都会相遇，只是圈数不同。
+
+或者更直观的理解：当快指针的速度是慢指针的两倍时，相对于慢指针每次前进一格，如果有环，必定能一格一格靠近慢指针直到追击成功。
+
+#### 141 Linked List Cycle
+
+# Stack and Queue
 
 + Stack:
 
@@ -104,7 +131,7 @@ For the follow up requirement of O(N) Time and O(1) Space, we should use:
   + Priority queue: 347
     (Exercise: 23)
 
-## Binary Tree and Recursion
+# Binary Tree and Recursion
 
 + Binary tree: A binary tree has a natural recursive structure. It generally consists of two parts: 
   + Base case
@@ -130,7 +157,7 @@ For the follow up requirement of O(N) Time and O(1) Space, we should use:
   + (Exercise: 98, 450, 108, 230， 236(LCA problem))
   + 当我使用inorder traversal遍历一棵二分搜索树，能得到一个从小到大的有序数组
 
-## Recursion and Backtracking
+# Recursion and Backtracking
 
 This technique can be used in tree-shaped problems.
 + Tree-shaped problems
@@ -162,7 +189,7 @@ This technique can be used in tree-shaped problems.
   + (Exercise: 52: N-Queens II - it can be faster by many optimization)
   + A cool exercise: (37: Sudoku Solver)
 
-## Dynamic Programming
+# Dynamic Programming
 
 > One problem about the course is it lacks concepts about recursive equation. So it is more fancy in techniques but did no help for me, for example, 9-7 is really hard to understand without a proper recursive equation, which is exactly it lacks.
 
@@ -187,7 +214,7 @@ The technique to solve dynamic programming problems:
   + (213 - put 198 in a ring; 337- put 138 in a binary tree; 309)
 
 > Knapsack problem:  
-The capacity of the knapsack is C. There are n items named 0..n-1, for each item, its weight is w(i) and value is v(i). This problem is to solve that how to fill the knapsack that the sum of weights is no larger than the capacity and the sum of values is greatest.
+> The capacity of the knapsack is C. There are n items named 0..n-1, for each item, its weight is w(i) and value is v(i). This problem is to solve that how to fill the knapsack that the sum of weights is no larger than the capacity and the sum of values is greatest.
 
 + Knapsack:
   + Bottom up: 2D-Dynamic Programming
@@ -214,7 +241,7 @@ The capacity of the knapsack is C. There are n items named 0..n-1, for each item
 + There are more dynamic programming problems in Leetcode but tend to be difficult.
 
 
-## Greedy algorithm
+# Greedy algorithm
 
 The difficult part about greedy algorithm is **to decide if this problem can be solved by greedy algorithm.**
 
