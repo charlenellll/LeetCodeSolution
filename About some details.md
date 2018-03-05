@@ -8,6 +8,8 @@ int record[26] = {n}; 只有第一个为n，其余都是0！！！
 int record[26];		  没有进行初始化，每一位都是物理地址原来存储的数字，随机
 int record[26] = {0}; 将record[0]初始化为一个指定数字（为了与剩余数字统一，将其初始化为0），而剩余元素自动初始化为0！
 
+#### 如果要把一个C++数组初始化一个统一的非0值，只能用memset或者for循环！！
+
 ### 所以要使用“int record[26] = {0}”和“记录index为实际index+1”的组合！
 
 记录index为实际index+1：  
@@ -67,3 +69,18 @@ The C++ standard doesn't specify implementation details, and only specifies comp
 
 这道题里，我们只一个一个字符地找，明明用hash table只要O(1)每次（共O(M))，用find()硬生生拖慢了！
 
+-----------
+
+189 Rotate Array
+
+由于我的代码速度非常蹊跷，于是探究了一番：
+
+## C++ push_back()比insert()快！能用push_back()则用它！
+
++ push_back()均摊时间O(1)
++ insert()则是O(n)（除非往尾部插入N个元素,均摊时间也为O(1)）
++ reverse 是O(n) time
+
+## C++中vector的底层实现原理及函数的时间复杂度
+
+详情查看那道题的markdown。
