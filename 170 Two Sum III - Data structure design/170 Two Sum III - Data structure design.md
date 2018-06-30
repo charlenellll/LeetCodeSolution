@@ -13,5 +13,5 @@ For example,
 
 Because in this problem it emphasizes "pair of numbers", since I can find an element in the map, I don't need an ordered data structure(such as array) to use collider pointers. I don't need collider pointers at all!
 
-My understanding of collider pointer upgrade a level:  
+# My understanding of collider pointer upgrade a level:  
 I only need to use collider pointers on the data structures that I cannot know all elements' values such as a sorted array. On data sructure such as map and set I can know all the keys so there is no need for two pointers.
