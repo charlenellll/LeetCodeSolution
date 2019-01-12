@@ -30,11 +30,8 @@ public:
                     l++;
                 }
             }
-        
         if( minSize > s.size() )
             return "";
-        return s.substr( minl, minSize );
-            
-        
+        return s.substr( minl, minSize );   
     }
 };

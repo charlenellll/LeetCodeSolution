@@ -16,7 +16,7 @@ Some classic problems:
 Exercise: 88(Merge), (215)
 
 + Two pointers:
-  + Collider pointer: 167,125,344,(345),11
+  + Collider pointer: 167,125,344,345,11
   + Sliding window: 209,3,438,(76-hard）
 
 # Problems about Hash Table
@@ -59,6 +59,13 @@ Exercise: 217 (Simpler than )
 + unordered_set和unordered_map内部实现是基于哈希表(hashtable)
   + 查找，插入，删除：linear time = O(1)
   + 同样的一组输入，建立含N个元素的hash table: O(N)，比红黑树快！
+
+## 关于set和map的排序
+
+set和map默认按照key值从小到大排列，用的是less<T>; 若想它们按照key值从大到小排列，要用greater<T>，如：
+
+  map<int, vector<char>, greater<int>> freq;
+  set<int,greater<int>
 
 # Problems about Linked list
 
