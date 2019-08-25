@@ -56,3 +56,21 @@ public:
         return k;
     }
 };
+
+
+// 20 ms, faster than 93.00% 
+
+class Solution {
+public:
+    int removeDuplicates(vector<int>& nums) {
+        if( nums.size() == 0 ) return 0;
+        int k = 1; // [0,k) are non-duplicate elements
+        for(int i = 1; i < nums.size(); i++){
+            if( nums[i] > nums[k-1] ){
+                if( i != k ) swap(nums[i], nums[k]);
+                k++;
+            }
+        }
+        return k;
+    }
+};
