@@ -1,3 +1,5 @@
+// 28 ms, faster than 29.25%
+
 class Solution {
 private:
     int findKth(vector<int>& nums, int k, int l, int r){
