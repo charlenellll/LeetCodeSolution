@@ -1,3 +1,4 @@
+// 8 ms, faster than 94.42%
 class Solution {
 public:
     int lengthOfLongestSubstring(string s) {
