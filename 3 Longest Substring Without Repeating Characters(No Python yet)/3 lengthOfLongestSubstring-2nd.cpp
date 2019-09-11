@@ -4,7 +4,7 @@
 class Solution {
 public:
     int lengthOfLongestSubstring(string s) {
-        int record[128] = {0};
+        int record[256] = {0}; // ASCII code has 256 members
         int l = 0, r = -1, len = 0;
         while( l < s.size() ){
             if( r+1 < s.size() && record[s[r+1]] == 0 ) {

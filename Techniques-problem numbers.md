@@ -11,13 +11,22 @@ To begin with, a simple question: 283
 
 Some classic problems:
 
-+ Quick sort with 3-way partition:75
++ **Quick sort with 3-way partition:75**
 
-Exercise: 88(Merge), (215)
+Exercise: 88(Merge as in Merge Sort),  215
 
 + Two pointers:
-  + Collider pointer: 167,125,344,345,11
+  + Collider pointer: 167,125,344,345,11 
   + Sliding window: 209,3,438,(76-hard）
+
+#### 对比：
+
++ **对撞指针**：
+  + 使用前提：数组，有序。
+  + 终止条件：while(l < r)
++ **滑动窗口**：
+  + 适用场景：数组无序，所求结果与数组连续相邻数据有关
+  + 终止条件 while(l < num.size())
 
 # Problems about Hash Table
 
@@ -25,6 +34,21 @@ Exercise: 88(Merge), (215)
 + Map: 350
 
 Exercise: 242, 202, (290(pattern), 205,(同构) 451)
+
+#### For 1-to-1 relationship problems:  map letter/words to the index
+
+Code can be more concise if map letter/words to the last index they show up (instead of each other)
+
+#### About Map order: 默认按键值升序，使用less\<T>
+
+```
+    1、map指定less作为其默认比较函数(对象),就是默认按键值升序排列
+    // map<string, int> name_score_map;
+
+    2、可以自定义，按照键值降序排列，注意加载 
+    // #include <functional> // std::greater
+    // map<string, int, greater<string>> name_score_map;
+```
 
 A classic problem : 1
 
@@ -59,27 +83,6 @@ Exercise: 217 (Simpler than )
 + unordered_set和unordered_map内部实现是基于哈希表(hashtable)
   + 查找，插入，删除：linear time = O(1)
   + 同样的一组输入，建立含N个元素的hash table: O(N)，比红黑树快！
-
-## 关于set和map的排序
-
-set和map默认按照key值从小到大排列，用的是less<T>; 若想它们按照key值从大到小排列，要用greater<T>，如：
-
-  map<int, vector<char>, greater<int>> freq;
-  set<int,greater<int>
-
-## set和map的键值限制: set或map的key使用自定义类型时必须重载<关系运算符
-
-C++ map的键类型可以是一个类，比如键类型可以是C\++标准库中的string类，但是对作为键的类有一个约束，那就是这个类必须定义小于操作符，也就是要重载小于运算操作符（C++标准库的string类就定义了小于操作符）。而且这个小于操作符比较函数还必须符合“严格弱排序”，简单来说就是：与自身比较时返回false，当两个键对象不存在小于关系，就视为相等；k1小于k2，k2小于k3，则k1必然小于k3。
-
-所以这样不行：
-
-    unordered_map<unordered_map<char, int>, vector<string>> record;
-    因为unordered_map<char, int>没有定义小于运算符
-
-
-这样可以：
-
-    unordered_map<string, vector<string>> record;
 
 # Problems about Linked list
 
@@ -158,7 +161,7 @@ For the follow up requirement of O(N) Time and O(1) Space, we should use:
   + Base case
   + Recursive steps 
 
-104; (111: There's a trap upon the base case, should be careful)
+104;  111: There's a trap upon the base recursive step, should be careful
 
 226; (Exercise: 100，101，222，110) 
 
@@ -309,4 +312,8 @@ My understanding of collider pointer upgrade a level:
 I only need to use collider pointers on the data structures that I cannot know all elements' values such as a sorted array. On data sructure such as map and set I can know all the keys so there is no need for two pointers.
 
 In this problem I used unordered_map so I don't need to use collider pointers, I can just traverse the map once and find if each key's completement exists in this map (&& key\*2 != target value) or key\*2 == target value.
+
+ 
+
+##### ASCII code has 256 members, so int array needs 256 elements.
 

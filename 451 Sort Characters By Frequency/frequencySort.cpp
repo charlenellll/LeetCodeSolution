@@ -1,4 +1,4 @@
-//16 ms, faster than 90.85% of C++ online submissions
+//112 ms, faster than 94.29% of C++ online submissions
 
 class Solution {
 public:

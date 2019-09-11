@@ -20,6 +20,11 @@ The important part is to process the one-to-one relationship should be fixed in 
 
 **In this case, use int array can be much faster.**
 
+
+### For 1-to-1 relationship problems: code can be more concise if map letter/words to the last index they show up
+Notice that the integer stored in the maps are 1-based since if one element does not exist in the map, map[element] = 0 will be set defaultly by the code when you judge the condition.
+
+
 ### In this solution, one thing worth noticing!! (Map and int array)
 
 When I do this, notice why I should use i+1, not i! although logically "i" would be right!

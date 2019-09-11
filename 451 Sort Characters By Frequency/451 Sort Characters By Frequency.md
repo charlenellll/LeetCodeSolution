@@ -44,4 +44,4 @@ To get the map in decreasing order of key, use greater<T>, for example:
 
 Similarly, set can also be setting to sort by decreasing order of key, using:
 
-	set<int,greater<int>
+	set<int,greater<int>>
