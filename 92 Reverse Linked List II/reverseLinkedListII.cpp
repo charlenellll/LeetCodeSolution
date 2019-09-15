@@ -1,3 +1,31 @@
+//2nd round
+class Solution {
+public:
+    ListNode* reverseBetween(ListNode* head, int m, int n) {
+        ListNode* pre = NULL, *cur = head;
+        for(int i = 1; i < m; i++ ){
+            pre = cur;
+            cur = cur->next;
+        }
+        if( !cur->next ) return head;
+        ListNode* before = pre, *tail = cur;
+        pre = cur, cur = cur->next;
+        for(int i = 0; i < n-m; i++ ){
+            ListNode* after = cur->next;
+            cur->next = pre;
+            pre = cur;
+            cur = after;
+        }
+        if(before) // Notice here! In some test cases m=1, before is NULL, then there is nothing before the new head, the new head is the tempHead of the middle reversed part.
+            before->next = pre;
+        else
+            head = pre;
+        tail->next = cur;
+        return head;
+    }
+};
+
+
 /**
  * Definition for singly-linked list.
  * struct ListNode {

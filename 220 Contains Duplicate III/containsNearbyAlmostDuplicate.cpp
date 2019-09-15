@@ -7,7 +7,7 @@ public:
             
                 //this is an iterator object, make sure it exists                        this is its value
             if( record.lower_bound((long long)nums[i] - (long long)t) != record.end() && *record.lower_bound((long long)nums[i] - (long long)t) <= (long long)nums[i] + (long long)t )
-                return true;
+                return true; // y >= x-t exists && y <= x + t 看视频
             
             record.insert(nums[i]);
             if( record.size() == k+1 )

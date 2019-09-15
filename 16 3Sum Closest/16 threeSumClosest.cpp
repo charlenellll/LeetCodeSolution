@@ -12,9 +12,9 @@ public:
                 int sum = nums[i] + nums[l] + nums[r];
                 if( sum == target ) return sum;
                 if( abs(sum - target) <= abs(target - closest)){
-                    closest = sum; // Notice here!There is no l++, r--!!(as in 3sum or other ksum problem in order to remove duplicates)
+                    closest = sum; // Notice here!There is no l++, r--!!(as in 3sum or other ksum problem)此时离target的绝对值最小，并不能表明指针移动方向
                 }
-                if( sum > target ) r--;
+                if( sum > target ) r--; //另起炉灶判断指针移动方向
                 else l++;
             }
         }
