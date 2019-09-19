@@ -19,6 +19,8 @@ Exercise: 88(Merge as in Merge Sort),  215
   + Collider pointer: 167,125,344,345,11 
   + Sliding window: 209,3,438,(76-hard）
 
+---
+
 #### 对比：
 
 + **对撞指针**：
@@ -35,34 +37,83 @@ Exercise: 88(Merge as in Merge Sort),  215
 
 Exercise: 242, 202, (290(pattern), 205,(同构) 451)
 
+----
+
 #### For 1-to-1 relationship problems:  map letter/words to the index
 
 Code can be more concise if map letter/words to the last index they show up (instead of each other)
 
+---
+
 #### About Map order: 默认按键值升序，使用less\<T>
 
-```
-    1、map指定less作为其默认比较函数(对象),就是默认按键值升序排列
-    // map<string, int> name_score_map;
+1. Map is by default using **increasing** order of key (using **less\<T>**); 
 
-    2、可以自定义，按照键值降序排列，注意加载 
-    // #include <functional> // std::greater
-    // map<string, int, greater<string>> name_score_map;
 ```
+map<string, int, less<string>> name_score_map; // by default
+```
+
+2. To get the map in **decreasing** order of key, use **greater\<T>**, for example:
+
+	// #include <functional> // std::greater
+	map<int, vector<char>, greater<int>> freq;
+
+Similarly, set can also be setting to sort by decreasing order of key, using:
+
+	set<int,greater<int>>
+
+---
 
 A classic problem : 1
 
 4-4 (Exercise: 15, 18, 16(We may not need Hash Table in this problem))-All are medium!
 
+---
+
+#### Solution for K-sum problems
+
+1. **2sum Problem**
+2. **Reduce K sum problem to K – 1 sum Problem**
+
+##### Remember to remove duplicate result
+
++ Sort the input vector to ensure the order
++ 1. All the outer loops: Remove duplicate target
++ 2. Inner loop: Remove duplicate numbers when doing two sum (notice that "l++, r--;" by moving l and r together is in order to (also) avoid duplicate after we found one solution. Actually we should not move l and r together but it works in this problem)
+
+##### Early-stopping tricks
+
+In inner 3sum part: in current scanning range,
++ if the sum of first two elements > target, 换j已不能解决问题: **break**; 
++ if the sum of last two elements < target, target1-nums[j] could be smaller, still possible solutions: **continue**.
+
+---
+
 All hash table problems requires our determination on what to search for:
 
 + Select the key flexibly: 454, 447(a little technically complicated for beginners in C++ or any other language)
 
-4-5 (Exercise: 49-medium; 4-6: 149-hard)
+------
+
+#### C++ set和map的键值限制: set或map的key使用自定义类型时必须重载<关系运算符
+
+C++ map的键类型可以是一个类，比如键类型可以是C\++标准库中的string类，但是**对作为键的类有一个约束，那就是这个类必须定义小于操作符，也就是要重载小于运算操作符**（C++标准库的string类就定义了小于操作符）。而且这个小于操作符比较函数还必须符合“严格弱排序”，简单来说就是：与自身比较时返回false，当两个键对象不存在小于关系，就视为相等；k1小于k2，k2小于k3，则k1必然小于k3。所以不能随便声明一个自定义key类型的set或map。
+
+---
+
+4-5 Exercise: 49-medium; 4-6: 149-hard(有double精度溢出的问题)
 
 + Hash table + sliding window: 219
 
-Compare the similarity and differences between 3# and 219#:
+---
+
+#### 比较两个string是否为anagrams时，可以不用hash map!
+
+直接**sort()两个string**然后比较是否相等比较省时。
+
+---
+
+Compare 3#(Longest Substring Without Repeating Characters) and 219#(Contains Duplicate II):
 
 + Similarity: 
   + They are both problems about hash table + sliding window.
@@ -71,11 +122,20 @@ Compare the similarity and differences between 3# and 219#:
   + The number of values is limited in 3#, only 256 types, so we used an array instead of set or map.
   + The size of sliding window is flexible in 3# while it is fixed in 219#.
 
-Exercise: 217 (Simpler than )
+---
 
-220(More difficult than 219)
+Exercise: 217 (Simpler than 219, actually no need for hash set) 220(More difficult than 219)
 
-## unordered_set和unordered_map内部实现与set和map大有不同：
+---
+
+#### std::set/map::lower_bound() 
+
++ Returns an iterator pointing to the first element in the container which is >= val (即>=val的最小值).
++ 只有set和map有unordered_set和unordered_map没有
+
+---
+
+#### unordered_set和unordered_map内部实现与set和map大有不同：
 
 + set和map内部实现是基于Red Black-Tree(红黑树)
   + 查找，插入，删除一个元素：O(logN)
@@ -86,7 +146,7 @@ Exercise: 217 (Simpler than )
 
 # Problems about Linked list
 
-A simple question: 206
++ A simple question: 206
 
 Exercise: 92, 83, 2-median, (86, 328, 445-median)
 
@@ -98,11 +158,22 @@ Exercise: 82, 21
 
 (Exercise: 25-hard, 147-Insersion Sort in Linked list, 148-Use (Merge Sort from bottom up) to sort a linked list in O(nlogn) time-Medium)
 
+---
+
+#### Sorting algorithm in Linked List:
+
++ Insertion sort: 147
++ MergeSort: 148
+
+---
+
 + Sometimes there's something more than just pointer operations: 237 (delete the node by changing its value instead of usual method when we have no access to the node before it)
 
 + Two pointers: 19
 
 Exercise: 61, （143, 234)
+
+---
 
 A technique is often used in singly linked list:
 
@@ -313,7 +384,12 @@ I only need to use collider pointers on the data structures that I cannot know a
 
 In this problem I used unordered_map so I don't need to use collider pointers, I can just traverse the map once and find if each key's completement exists in this map (&& key\*2 != target value) or key\*2 == target value.
 
- 
+## About basic knowledge and C++
 
-##### ASCII code has 256 members, so int array needs 256 elements.
+##### ASCII code 
 
+It has 256 members, so int array needs 256 elements.
+
+#### C++的sort()复杂度O(NlogN)
+
+sort()是改进的快排算法。
