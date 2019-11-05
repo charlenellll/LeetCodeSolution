@@ -46,3 +46,31 @@ public:
         return res;
     }
 };
+
+
+// 大部队的解法比较难想
+
+class Solution {
+public:
+    vector<int> inorderTraversal(TreeNode* root) {
+        vector<int> result;
+        TreeNode* cur = root;
+        stack<TreeNode*> s;
+        
+        while (cur || !s.empty()) {
+            while (cur) {
+                s.push(cur);
+                cur = cur->left;
+            }
+            
+            cur = s.top();
+            s.pop();
+            
+            result.push_back(cur->val);
+            
+            cur = cur->right;
+        }
+        
+        return result;
+    }
+};

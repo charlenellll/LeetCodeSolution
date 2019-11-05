@@ -24,6 +24,30 @@ public:
     
 };
 
+// 这样也可以，当然空间稍微大了一丢丢
+
+class Solution {
+public:
+        vector<vector<int> > Print(TreeNode* root) {
+            vector<vector<int>> res;
+            if( !root ) return res;
+            queue< pair<TreeNode*, int> > q;
+            q.push( make_pair(root, 0) );
+            while( !q.empty() ){
+                TreeNode* cur = q.front().first;
+                int level = q.front().second;
+                q.pop();
+                if( level == res.size() )
+                    res.push_back(vector<int>());
+                res[level].push_back(cur->val);
+                if( cur->left ) q.push( make_pair(cur->left, level + 1) );
+                if( cur->right ) q.push( make_pair(cur->right, level + 1));
+            }
+            return res;
+        }
+    
+};
+
 /*
 struct TreeNode {
     int val;
