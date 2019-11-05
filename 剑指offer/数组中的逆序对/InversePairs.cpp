@@ -29,3 +29,35 @@ public:
         return cnt % 1000000007;
     }
 };
+
+// 2-nd time practice
+class Solution {
+private:
+    long long cnt = 0;
+    void mergesort(vector<int>& nums, int l, int r){
+        if( l >= r ) return;
+        int mid = l + (r-l)/2;
+        mergesort(nums, l, mid);
+        mergesort(nums, mid+1, r);
+        // merge
+        vector<int> aux;
+        for(int i = l; i <= r; i++ )
+            aux.push_back( nums[i] );
+        int p = 0, q = mid+1-l, i=l;
+        while( p <= mid-l && q <= r-l ){
+            if( aux[p] <= aux[q] )
+                nums[i++] = aux[p++];
+            else{ // aux[p] > aux[q],统计逆序对:左半部分p后面的都比q大
+                cnt += mid-l-p+1;
+                nums[i++] = aux[q++];
+            }
+        }
+        while( p <= mid-l ) nums[i++] = aux[p++];
+        while( q <= r-l ) nums[i++] = aux[q++];
+    }
+public:
+    int InversePairs(vector<int> data) {
+        mergesort(data, 0, data.size()-1);
+        return cnt % 1000000007;
+    }
+};
