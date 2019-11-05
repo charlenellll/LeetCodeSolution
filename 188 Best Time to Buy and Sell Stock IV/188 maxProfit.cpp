@@ -14,7 +14,7 @@ public:
         vector<int> profit(2 * k, 0 );//偶数index=i位存buy(i)，奇数位i+1存sell(i)，表示第t天及之前前有i笔buy/sell的利润
         profit[0] = -prices[0];
         profit[1] = 0;
-        for(int i = 2; i < 2*k; i += 2 ) profit[i] = INT_MIN; //buy i needs lower bound when i >= 2
+        for(int i = 2; i < 2*k; i += 2 ) profit[i] = INT_MIN; //buy i needs lower bound when i >= 2, because buy_i likely be negtive, so INT_MIN as lowerbound makes sure max() func.
         
         for(int t = 1; t < n; t++ ){
             for(int i = 2*k-1; i >= 1; i -- ){// sell k, buy k, ..., sell 2, buy 2

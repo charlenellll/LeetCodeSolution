@@ -1,4 +1,4 @@
-// 细节方法二：先理清依赖关系，sell2依赖buy2依赖sell依赖buy1依赖自己，因此从sell2开始改
+// 细节方法二：先理清依赖关系，sell2依赖buy2依赖sell1依赖buy1依赖自己，因此从sell2开始改
 // 4 ms, faster than 98.39%
 class Solution {
 public:

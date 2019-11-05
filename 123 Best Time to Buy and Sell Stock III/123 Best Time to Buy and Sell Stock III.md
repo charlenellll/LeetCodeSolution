@@ -27,7 +27,7 @@ Note: You may not engage in multiple transactions at the same time (i.e., you mu
 
 限制条件：做 <= 2次交易。
 
-设buy1[i]表示到第一天为止以一笔buy交易结尾的利润。buy2, sell1, sell2 同理：
+设buy1[i]表示到第i天为止以一笔buy交易结尾的利润。buy2, sell1, sell2 同理：
 + buy1[i] = max( 0 - prices[i], buy[i-1]); 分别表示是在第i天进行的第一笔buy交易，和在第i天之前完成了一笔buy交易
 + buy2[i] = max( sell1[i-1] - prices[i], buy2[i-1]);
 + sell1[i] = max(buy1[i-1] + prices[i], sell1[i-1]);
