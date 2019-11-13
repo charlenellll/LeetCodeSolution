@@ -6,12 +6,15 @@ You may not engage in multiple transactions at the same time (ie, you must sell 
 After you sell your stock, you cannot buy stock on next day. (ie, cooldown 1 day)
 
 	Example:
-
+	
 	Input: [1,2,3,0,2]
 	Output: 3 
 	Explanation: transactions = [buy, sell, cooldown, buy, sell]
 
 
 ## DP
+
++ buy[i]表示最近以buy结束的，到第i天(0-based)的收益
++ sell[i]表示以sell结束的，到第i天的收益
 
 See the code.
