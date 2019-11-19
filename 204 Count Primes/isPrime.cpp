@@ -64,7 +64,7 @@ public:
 
 
 // Normal solution: brutal-force
-// inpit:1500000: TLE!
+// input:1500000: TLE!
 
 class Solution {
 private:
